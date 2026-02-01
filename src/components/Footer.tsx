@@ -1,62 +1,91 @@
 import { motion } from "framer-motion";
-import { Twitter, Youtube, Linkedin, Instagram, Mail, Heart } from "lucide-react";
-
-const socialLinks = [
-  { icon: Youtube, href: "https://youtube.com/@alexmorgan", label: "YouTube" },
-  { icon: Twitter, href: "https://twitter.com/alexmorgan", label: "Twitter" },
-  { icon: Instagram, href: "https://instagram.com/alexmorgan", label: "Instagram" },
-  { icon: Linkedin, href: "https://linkedin.com/in/alexmorgan", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:hello@alexmorgan.com", label: "Email" },
-];
 
 const Footer = () => {
   return (
-    <footer className="section-padding bg-foreground text-background">
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      id="contact"
+      className="section-padding border-t border-border"
+    >
       <div className="container-narrow">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center space-y-8"
-        >
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold font-display">
-              Let's Connect
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
+          {/* Left - Contact Info */}
+          <div className="space-y-8">
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+              Let's work together
             </h2>
-            <p className="text-background/70 mt-3 text-lg">
-              Follow me for daily tips and updates
-            </p>
+            <div className="space-y-4">
+              <a
+                href="mailto:hello@example.com"
+                className="block text-lg text-muted-foreground hover:text-foreground transition-colors"
+              >
+                hello@example.com
+              </a>
+              <a
+                href="tel:+1234567890"
+                className="block text-lg text-muted-foreground hover:text-foreground transition-colors"
+              >
+                +1 (234) 567-890
+              </a>
+            </div>
           </div>
 
-          <div className="flex items-center justify-center gap-4">
-            {socialLinks.map((social) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
+          {/* Right - Social Links */}
+          <div className="space-y-8">
+            <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+              Follow
+            </h3>
+            <div className="flex flex-wrap gap-6">
+              <a
+                href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
-                aria-label={social.label}
+                className="text-sm font-medium hover:opacity-70 transition-opacity"
               >
-                <social.icon className="w-5 h-5" />
-              </motion.a>
-            ))}
+                Twitter
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium hover:opacity-70 transition-opacity"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium hover:opacity-70 transition-opacity"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium hover:opacity-70 transition-opacity"
+              >
+                YouTube
+              </a>
+            </div>
           </div>
+        </div>
 
-          <div className="pt-8 border-t border-background/10">
-            <p className="text-sm text-background/60 flex items-center justify-center gap-2">
-              Made with <Heart className="w-4 h-4 text-accent fill-accent" /> by Alex Morgan
-            </p>
-            <p className="text-xs text-background/40 mt-2">
-              © {new Date().getFullYear()} All rights reserved.
-            </p>
-          </div>
-        </motion.div>
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            © 2025 All rights reserved.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Designed with precision
+          </p>
+        </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
