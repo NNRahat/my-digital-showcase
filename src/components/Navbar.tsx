@@ -3,9 +3,9 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "Products", href: "#products" },
-  { label: "Videos", href: "#videos" },
+  { label: "Work", href: "#work" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -13,17 +13,20 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 bg-background"
     >
       <div className="container-narrow px-6 md:px-12 lg:px-24">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between py-6">
           {/* Logo */}
-          <a href="#" className="text-xl md:text-2xl font-bold font-display">
-            Alex<span className="text-primary">.</span>
+          <a href="/" className="font-display font-semibold text-lg tracking-tight">
+            Jackson Davis, Architect
           </a>
+
+          {/* Divider Line - Desktop */}
+          <div className="divider-line flex-1 mx-8 hidden md:block" />
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
@@ -31,19 +34,11 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground font-medium transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
             ))}
-            <motion.a
-              href="#products"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm"
-            >
-              Shop Now
-            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -75,13 +70,6 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#products"
-                onClick={() => setIsOpen(false)}
-                className="px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm text-center mt-2"
-              >
-                Shop Now
-              </a>
             </div>
           </motion.div>
         )}
