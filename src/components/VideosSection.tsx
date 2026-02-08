@@ -4,7 +4,7 @@ import { Play, ArrowUpRight } from "lucide-react";
 const videos = [
   {
     id: 1,
-    title: "Latest Video",
+    title: "How I Turned an Idea into $100 Selling a Digital Product on Threads",
     views: "Watch on YouTube",
     duration: "",
     thumbnail: "https://img.youtube.com/vi/PXScuHz-7hw/hqdefault.jpg",
@@ -12,7 +12,7 @@ const videos = [
   },
   {
     id: 2,
-    title: "Latest Video",
+    title: "How I Came Up With A Product that Made Me 100$ | Conrevin",
     views: "Watch on YouTube",
     duration: "",
     thumbnail: "https://img.youtube.com/vi/pEV2SuckQYM/hqdefault.jpg",
@@ -20,7 +20,7 @@ const videos = [
   },
   {
     id: 3,
-    title: "Latest Video",
+    title: "Here’s Exactly How I Made $100 Online Selling simple Digital Product",
     views: "Watch on YouTube",
     duration: "",
     thumbnail: "https://img.youtube.com/vi/9uvq7BMP5t4/hqdefault.jpg",
@@ -30,7 +30,7 @@ const videos = [
 
 const VideosSection = () => {
   return (
-    <section id="videos" className="section-padding bg-secondary/50">
+    <section id="videos" className="section-padding signature-color">
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ const VideosSection = () => {
           className="flex items-center justify-between gap-6 mb-16"
         >
           <div className="flex items-center gap-6 flex-1">
-            <h2 className="text-lg font-display font-medium whitespace-nowrap">
+            <h2 className="text-lg text-white font-display font-medium whitespace-nowrap">
               Latest Videos
             </h2>
             <div className="divider-line flex-1" />
@@ -50,7 +50,7 @@ const VideosSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ opacity: 0.7 }}
-            className="inline-flex items-center gap-2 text-sm font-medium"
+            className="inline-flex text-white items-center gap-2 text-sm font-medium"
           >
             View All
             <ArrowUpRight className="w-4 h-4" />
@@ -75,7 +75,7 @@ const VideosSection = () => {
                   <img
                     src={video.thumbnail}
                     alt={video.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover transition-all duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="w-14 h-14 rounded-full bg-background flex items-center justify-center">
@@ -90,10 +90,10 @@ const VideosSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <h3 className="text-sm font-display font-semibold group-hover:opacity-70 transition-opacity line-clamp-2">
+                  <h3 className="text-sm text-white font-display font-semibold group-hover:opacity-70 transition-opacity line-clamp-2">
                     {video.title}
                   </h3>
-                  <p className="text-xs text-muted-foreground">{video.views}</p>
+                  <p className="text-xs text-white text-muted-foreground">{video.views}</p>
                 </div>
               </div>
             </motion.a>

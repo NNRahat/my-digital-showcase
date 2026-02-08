@@ -34,13 +34,13 @@ const Navbar = () => {
             {navLinks.map(link => <a key={link.label} href={link.href} className="text-white/90 hover:text-white font-medium transition-colors">
                 {link.label}
               </a>)}
-            <motion.a href="#products" whileHover={{
+            {/* <motion.a href="#products" whileHover={{
             scale: 1.02
           }} whileTap={{
             scale: 0.98
           }} className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm">
               Shop Now
-            </motion.a>
+            </motion.a> */}
           </div>
 
           {/* Mobile Menu Button */}

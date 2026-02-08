@@ -31,7 +31,8 @@ const PhilosophySection = () => {
             className="aspect-[4/5] overflow-hidden"
           >
             <img
-              src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&h=1000&fit=crop"
+              src="src\assets\487035bb-8d09-4870-830e-973b0551fd1d.png?w=800&h=1000&fit=crop"
+              // src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&h=1000&fit=crop"
               alt="Architectural interior"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
             />
@@ -45,9 +46,17 @@ const PhilosophySection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-center"
           >
-            <p className="text-xl md:text-2xl lg:text-3xl font-display font-light leading-relaxed text-muted-foreground">
-              I believe that good architectural design is not just about creating an intelligent blend of style, form and function. It is also a form of storytelling.
-            </p>
+            <div className="relative pl-14">
+              <img
+                src="src/assets/pngwing.com.png"
+                alt="Quotation mark"
+                className="absolute -left-12 -top-12 w-24 h-24 opacity-60"
+                aria-hidden="true"
+              />
+              <p className="text-xl md:text-2xl lg:text-3xl merriweather font-light leading-relaxed text-muted-foreground">
+                I believe the internet rewards those who learn how to communicate, create, and sell. My goal is to help people turn simple skills into real income, real growth, and long-term freedom.
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>

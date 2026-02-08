@@ -10,8 +10,8 @@ const products = [
     description: "Grow faster on Threads and start selling. Includes a Notion template to track your 30-day journey.",
     price: "$13",
     category: "PDF + Notion Template",
-    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=600&fit=crop",
-    url: GUMROAD_STORE,
+    image: "src/assets/hacks on threads.png",
+    url: "https://conrevin.gumroad.com/l/HacksonThreads",
   },
   {
     id: 2,
@@ -19,8 +19,8 @@ const products = [
     description: "Get Canva Pro at an affordable monthly rate for all your design needs.",
     price: "$2.99/mo",
     category: "Subscription",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30794bc?w=800&h=600&fit=crop",
-    url: GUMROAD_STORE,
+    image: "src/assets/canva pro.png",
+    url: "https://conrevin.gumroad.com/l/canvapro",
   },
   {
     id: 3,
@@ -28,8 +28,8 @@ const products = [
     description: "A personal guide to finding balance and purpose in long workdays. Pay what you want.",
     price: "$0+",
     category: "eBook",
-    image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&h=600&fit=crop",
-    url: GUMROAD_STORE,
+    image: "src/assets/Consistency.png",
+    url: "https://conrevin.gumroad.com/l/workfor12to14",
   },
 ];
 
@@ -80,7 +80,7 @@ const ProductsSection = () => {
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover transition-all duration-700"
                   />
                 </div>
                 

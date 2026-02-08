@@ -19,17 +19,17 @@ const Footer = () => {
             </h2>
             <div className="space-y-4">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:conrevin936@gmail.com"
                 className="block text-lg text-muted-foreground hover:text-foreground transition-colors"
               >
-                hello@example.com
+                conrevin936@gmail.com
               </a>
-              <a
-                href="tel:+1234567890"
+              {/* <a
+                href=""
                 className="block text-lg text-muted-foreground hover:text-foreground transition-colors"
               >
-                +1 (234) 567-890
-              </a>
+                
+              </a> */}
             </div>
           </div>
 
@@ -40,15 +40,15 @@ const Footer = () => {
             </h3>
             <div className="flex flex-wrap gap-6">
               <a
-                href="https://twitter.com"
+                href="https://www.threads.com/@conrevin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium hover:opacity-70 transition-opacity"
               >
-                Twitter
+                Threads
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/conrevin/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium hover:opacity-70 transition-opacity"
@@ -56,15 +56,15 @@ const Footer = () => {
                 Instagram
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.tiktok.com/@conrevin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium hover:opacity-70 transition-opacity"
               >
-                LinkedIn
+                TikTok
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@conrevin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium hover:opacity-70 transition-opacity"
@@ -78,10 +78,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 All rights reserved.
+            © 2026 All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Designed with precision
+            Be the guy who gives it all
           </p>
         </div>
       </div>
