@@ -21,18 +21,17 @@ const Navbar = () => {
     opacity: 1
   }} transition={{
     duration: 0.5
-  }} className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+  }} className="fixed top-0 left-0 right-0 z-50 bg-[#161616] border-b border-white/10">
       <div className="container-narrow px-6 md:px-12 lg:px-24">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="text-xl md:text-2xl font-bold font-display">
-            
+          <a href="#" className="text-xl md:text-2xl font-bold font-display text-white hover:text-white/90 transition-colors">
             Conrevin<span className="text-primary">.</span>
           </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => <a key={link.label} href={link.href} className="text-muted-foreground hover:text-foreground font-medium transition-colors">
+            {navLinks.map(link => <a key={link.label} href={link.href} className="text-white/90 hover:text-white font-medium transition-colors">
                 {link.label}
               </a>)}
             <motion.a href="#products" whileHover={{
@@ -45,7 +44,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-foreground" aria-label="Toggle menu">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-white" aria-label="Toggle menu">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -60,9 +59,9 @@ const Navbar = () => {
       }} exit={{
         opacity: 0,
         y: -10
-      }} className="md:hidden py-4 border-t border-border">
+      }} className="md:hidden py-4 border-t border-white/10 bg-[#161616]">
             <div className="flex flex-col gap-4">
-              {navLinks.map(link => <a key={link.label} href={link.href} onClick={() => setIsOpen(false)} className="text-muted-foreground hover:text-foreground font-medium transition-colors py-2">
+              {navLinks.map(link => <a key={link.label} href={link.href} onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white font-medium transition-colors py-2">
                   {link.label}
                 </a>)}
               <a href="#products" onClick={() => setIsOpen(false)} className="px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm text-center mt-2">

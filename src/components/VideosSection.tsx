@@ -4,27 +4,27 @@ import { Play, ArrowUpRight } from "lucide-react";
 const videos = [
   {
     id: 1,
-    title: "How I Made $100K Selling Notion Templates",
-    views: "245K views",
-    duration: "18:42",
-    thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop",
-    url: "https://youtube.com/watch?v=example1",
+    title: "Latest Video",
+    views: "Watch on YouTube",
+    duration: "",
+    thumbnail: "https://img.youtube.com/vi/PXScuHz-7hw/hqdefault.jpg",
+    url: "https://youtu.be/PXScuHz-7hw",
   },
   {
     id: 2,
-    title: "The Ultimate Guide to Digital Products in 2024",
-    views: "189K views",
-    duration: "24:15",
-    thumbnail: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=450&fit=crop",
-    url: "https://youtube.com/watch?v=example2",
+    title: "Latest Video",
+    views: "Watch on YouTube",
+    duration: "",
+    thumbnail: "https://img.youtube.com/vi/pEV2SuckQYM/hqdefault.jpg",
+    url: "https://youtu.be/pEV2SuckQYM",
   },
   {
     id: 3,
-    title: "5 Mistakes That Kill Your Online Business",
-    views: "156K views",
-    duration: "12:30",
-    thumbnail: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=450&fit=crop",
-    url: "https://youtube.com/watch?v=example3",
+    title: "Latest Video",
+    views: "Watch on YouTube",
+    duration: "",
+    thumbnail: "https://img.youtube.com/vi/9uvq7BMP5t4/hqdefault.jpg",
+    url: "https://youtu.be/9uvq7BMP5t4",
   },
 ];
 
@@ -46,7 +46,7 @@ const VideosSection = () => {
             <div className="divider-line flex-1" />
           </div>
           <motion.a
-            href="https://youtube.com/@alexmorgan"
+            href="https://www.youtube.com/@conrevin"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ opacity: 0.7 }}
@@ -82,9 +82,11 @@ const VideosSection = () => {
                       <Play className="w-5 h-5 text-foreground fill-current ml-0.5" />
                     </div>
                   </div>
-                  <span className="absolute bottom-3 right-3 px-2 py-1 bg-foreground text-background text-xs font-medium">
-                    {video.duration}
-                  </span>
+                  {video.duration && (
+                    <span className="absolute bottom-3 right-3 px-2 py-1 bg-foreground text-background text-xs font-medium">
+                      {video.duration}
+                    </span>
+                  )}
                 </div>
                 
                 <div className="space-y-2">
