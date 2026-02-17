@@ -37,12 +37,12 @@ const Navbar = () => {
             {navLinks.map(link => <a key={link.label} href={link.href} onClick={(e) => { if ((link as any).isRoute) { e.preventDefault(); navigate(link.href); } }} className="text-white/90 hover:text-white font-medium transition-colors">
                 {link.label}
               </a>)}
-            <motion.a href="/products" onClick={(e) => { e.preventDefault(); navigate("/products"); }} whileHover={{
+            <motion.a href="/blogs" onClick={(e) => { e.preventDefault(); navigate("/blogs"); }} whileHover={{
             scale: 1.02
           }} whileTap={{
             scale: 0.98
           }} className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm">
-              Shop Now
+              Blogs
             </motion.a>
           </div>
 
@@ -67,8 +67,8 @@ const Navbar = () => {
               {navLinks.map(link => <a key={link.label} href={link.href} onClick={(e) => { if ((link as any).isRoute) { e.preventDefault(); navigate(link.href); } setIsOpen(false); }} className="text-white/90 hover:text-white font-medium transition-colors py-2">
                   {link.label}
                 </a>)}
-              <a href="/products" onClick={(e) => { e.preventDefault(); navigate("/products"); setIsOpen(false); }} className="px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm text-center mt-2">
-                Shop Now
+              <a href="/blogs" onClick={(e) => { e.preventDefault(); navigate("/blogs"); setIsOpen(false); }} className="px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm text-center mt-2">
+                Blogs
               </a>
             </div>
           </motion.div>}
