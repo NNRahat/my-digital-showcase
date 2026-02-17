@@ -11,7 +11,8 @@ const navLinks = [{
   isRoute: true
 }, {
   label: "Videos",
-  href: "#videos"
+  href: "/videos",
+  isRoute: true
 }];
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
