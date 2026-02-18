@@ -1,18 +1,22 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 const navLinks = [{
   label: "Home",
   href: "#"
 }, {
   label: "Products",
-  href: "#products"
+  href: "/products",
+  isRoute: true
 }, {
   label: "Videos",
-  href: "#videos"
+  href: "/videos",
+  isRoute: true
 }];
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   return <motion.nav initial={{
     y: -20,
     opacity: 0
@@ -31,15 +35,15 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => <a key={link.label} href={link.href} className="text-white/90 hover:text-white font-medium transition-colors">
+            {navLinks.map(link => <a key={link.label} href={link.href} onClick={(e) => { if ((link as any).isRoute) { e.preventDefault(); navigate(link.href); } }} className="text-white/90 hover:text-white font-medium transition-colors">
                 {link.label}
               </a>)}
-            {/* <motion.a href="#products" whileHover={{
+            {/* <motion.a href="/blogs" onClick={(e) => { e.preventDefault(); navigate("/blogs"); }} whileHover={{
             scale: 1.02
           }} whileTap={{
             scale: 0.98
           }} className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm">
-              Shop Now
+              Blogs
             </motion.a> */}
           </div>
 
@@ -61,11 +65,11 @@ const Navbar = () => {
         y: -10
       }} className="md:hidden py-4 border-t border-white/10 bg-[#161616]">
             <div className="flex flex-col gap-4">
-              {navLinks.map(link => <a key={link.label} href={link.href} onClick={() => setIsOpen(false)} className="text-white/90 hover:text-white font-medium transition-colors py-2">
+              {navLinks.map(link => <a key={link.label} href={link.href} onClick={(e) => { if ((link as any).isRoute) { e.preventDefault(); navigate(link.href); } setIsOpen(false); }} className="text-white/90 hover:text-white font-medium transition-colors py-2">
                   {link.label}
                 </a>)}
-              <a href="#products" onClick={() => setIsOpen(false)} className="px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm text-center mt-2">
-                Shop Now
+              <a href="/blogs" onClick={(e) => { e.preventDefault(); navigate("/blogs"); setIsOpen(false); }} className="px-5 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm text-center mt-2">
+                Blogs
               </a>
             </div>
           </motion.div>}
