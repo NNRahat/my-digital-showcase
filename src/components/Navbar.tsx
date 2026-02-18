@@ -3,16 +3,16 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 const navLinks = [{
-  label: "Home",
-  href: "#"
-}, {
-  label: "Products",
-  href: "/products",
-  isRoute: true
-}, {
-  label: "Videos",
-  href: "/videos",
-  isRoute: true
+//   label: "Home",
+//   href: "#"
+// }, {
+//   label: "Products",
+//   href: "/products",
+//   isRoute: true
+// }, {
+//   label: "Videos",
+//   href: "/videos",
+//   isRoute: true
 }];
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link => <a key={link.label} href={link.href} onClick={(e) => { if ((link as any).isRoute) { e.preventDefault(); navigate(link.href); } }} className="text-white/90 hover:text-white font-medium transition-colors">
                 {link.label}
               </a>)}
@@ -45,7 +45,7 @@ const Navbar = () => {
           }} className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm">
               Blogs
             </motion.a>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-white" aria-label="Toggle menu">
